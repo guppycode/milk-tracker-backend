@@ -1,0 +1,19 @@
+{
+	"properties": [
+		{
+			"name": "audit.storage.type",
+			"type": "java.lang.String",
+			"description": "Storage Type: jpa (SQL) or document (NoSQL)."
+		},
+		{
+			"name": "core.security.mode",
+			"type": "com.guppycode.security.configs.CoreSecurityProperties.SecurityMode",
+			"description": "Security mode: AUTO, OAUTH2_RESOURCE_SERVER, DEFAULT, or DISABLED."
+		},
+		{
+			"name": "core.security.allowed-origins",
+			"type": "java.util.List<java.lang.String>",
+			"description": "Frontend application URLs allowed to access this API. Multiple values can be provided as a comma-separated list."
+		}
+	]
+}

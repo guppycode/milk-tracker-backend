@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.guppycode</groupId>
+        <artifactId>guppycode-core-backend</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>guppycode-core-commons</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+		<!-- Core Spring infrastructure used by shared abstractions and auto-configuration support -->
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-autoconfigure</artifactId>
+	    </dependency>
+	
+	    <!-- Common web contracts and MVC types referenced by shared components -->
+	    <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-webmvc</artifactId>
+	    </dependency>
+
+	    <!-- Servlet request contracts used to derive current server URL information -->
+	    <dependency>
+	        <groupId>jakarta.servlet</groupId>
+	        <artifactId>jakarta.servlet-api</artifactId>
+	        <scope>provided</scope>
+	    </dependency>
+	
+	    <!-- Validation annotations and contracts used across modules -->
+	    <dependency>
+	        <groupId>jakarta.validation</groupId>
+	        <artifactId>jakarta.validation-api</artifactId>
+	    </dependency>
+	
+	    <!-- Standard Jakarta annotations used by shared components -->
+	    <dependency>
+	        <groupId>jakarta.annotation</groupId>
+	        <artifactId>jakarta.annotation-api</artifactId>
+	    </dependency>
+	
+	    <!-- JSON serialization and deserialization support for shared DTOs and utilities -->
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	    </dependency>
+	
+	    <!-- Logging API used throughout the GuppyCode Core modules -->
+	    <dependency>
+	        <groupId>org.slf4j</groupId>
+	        <artifactId>slf4j-api</artifactId>
+	    </dependency>
+	
+	    <!-- Testing infrastructure -->
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-test</artifactId>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Architecture and modularity verification tests -->
+	    <dependency>
+	        <groupId>com.tngtech.archunit</groupId>
+	        <artifactId>archunit-junit5</artifactId>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Lombok is used only during compilation and is not exposed transitively to consumers -->
+	    <dependency>
+	        <groupId>org.projectlombok</groupId>
+	        <artifactId>lombok</artifactId>
+	        <scope>provided</scope>
+	        <optional>true</optional>
+	    </dependency>
+    </dependencies>
+    
+</project>
